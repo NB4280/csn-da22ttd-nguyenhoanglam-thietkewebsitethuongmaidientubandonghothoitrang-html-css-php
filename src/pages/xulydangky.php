@@ -24,7 +24,7 @@ if (isset($_POST['register'])) {
             echo "<script>alert('Số điện thoại đã được sử dụng!');</script>";
         } else {
             
-            $sql_insert = "INSERT INTO khachhang (HoTenKhachHang, DiaChi, GioiTinh, SoDienThoai, `Mật khẩu`) 
+            $sql_insert = "INSERT INTO khachhang (HoTenKhachHang, DiaChi, GioiTinh, SoDienThoai, `MatKhau`) 
                            VALUES ('$hoten', '$diachi', '$gioitinh', '$sodienthoai', '$hashed_password')";
             if (mysqli_query($mysqli, $sql_insert)) {
                 echo "<script>alert('Đăng ký thành công!'); window.location.href='login.php';</script>";
