@@ -27,7 +27,16 @@
                     ?>
                     <label for="categoryName" class="form-label">Tên danh mục</label>
                     <input type="text" class="form-control" name="tendanhmuc" value="<?php echo $dong['TenDanhMucSP']?>" required>
-                
+                            
+                    <label for="HinhAnh" class="form-label">Hình ảnh</label>
+                        <?php if (!empty($dong['HinhAnh'])): ?>
+                            <div>
+                                <img src="../modules/quanlybaiviet/uploads/<?php echo $dong['HinhAnh'] ?>" alt="Hình ảnh sản phẩm" style="max-width: 200px; margin-bottom: 10px; border-radius: 5px;">
+                                <p>Hình ảnh hiện tại</p>
+                            </div>
+                        <?php endif; ?>
+                        <input type="file" id="HinhAnh" class="form-control" name="HinhAnh">
+
                     <div class="d-flex justify-content-center mt-3">
                         <button type="submit" class="btn bg-primary" name="suadanhmuc">Sửa</button>
                     </div>

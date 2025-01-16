@@ -8,13 +8,13 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 1">
+                    <img src="../includes/uploads/banner.jpg" class="d-block w-100" alt="Slide 1" style="width: 1200px; height: 400px; object-fit: cover;">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 2">
+                <img src="../includes/uploads/banner2.jpg" class="d-block w-100" alt="Slide 2" style="width: 1200px; height: 400px; object-fit: cover;">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 3">
+                <img src="../includes/uploads/banner3.jpg" class="d-block w-100" alt="Slide 3" style="width: 1200px; height: 400px; object-fit: cover;">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

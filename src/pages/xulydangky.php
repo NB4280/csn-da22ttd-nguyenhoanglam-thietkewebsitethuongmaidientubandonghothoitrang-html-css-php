@@ -27,7 +27,7 @@ if (isset($_POST['register'])) {
             $sql_insert = "INSERT INTO khachhang (HoTenKhachHang, DiaChi, GioiTinh, SoDienThoai, `MatKhau`) 
                            VALUES ('$hoten', '$diachi', '$gioitinh', '$sodienthoai', '$hashed_password')";
             if (mysqli_query($mysqli, $sql_insert)) {
-                echo "<script>alert('Đăng ký thành công!'); window.location.href='login.php';</script>";
+                echo "<script>alert('Đăng ký thành công!'); window.location.href='dangnhap.php';</script>";
                 $_SESSION['dangky'] = $hoten;
 
             } else {

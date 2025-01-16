@@ -1,9 +1,6 @@
-
-
 <?php
     $sql_sua_sanpham = "SELECT * FROM sanpham WHERE MaSanPham = '$_GET[masanpham]' LIMIT 1";
     $query_sua_sanpham =  mysqli_query($mysqli,$sql_sua_sanpham);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/quanly.css">
     <title>Quản Lý Sản Phẩm</title>
+
 </head>
 <body>
     <div class="container">
@@ -82,16 +80,6 @@
             </div>
         </div>
     </div>
+   
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

@@ -17,9 +17,7 @@
                     <th>Danh mục</th>
                     <th>Hình ảnh</th>
                     <th class="text-center">Giá</th>
-                    <th class="text-center">Số lượng</th>
-                    <th class="text-center">Tóm tắt</th>
-                    <th>Mô tả</th>
+                    <th class="text-center">Số lượng</th>                    
                     <th class="text-center">Trạng thái</th>
                     <th class="text-center">Quản lý</th>
                 </tr>
@@ -45,8 +43,6 @@
                     <td class="text-center align-middle"><img src="../modules/quanlysanpham/uploads/<?php echo $row['HinhAnh']; ?>" alt="Hình ảnh" style="width: 70px; height: auto; border-radius: 5px;"></td>
                     <td class="text-center align-middle"><?php echo number_format($row['GiaBan'], 2); ?> đ</td>
                     <td class="text-center align-middle"><?php echo $row['SoLuongSP']; ?></td>
-                    <td class="align-middle"><?php echo $row['TomTat']; ?></td>
-                    <td class="align-middle"><?php echo $row['MoTa']; ?></td>
                     <td class="text-center align-middle">
                         <?php if($row['TrangThai'] == 1){
                             echo "<span class='badge bg-success'>Kích hoạt</span>";

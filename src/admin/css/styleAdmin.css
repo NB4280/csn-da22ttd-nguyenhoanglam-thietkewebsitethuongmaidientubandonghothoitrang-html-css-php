@@ -109,3 +109,18 @@ body {
 .qlsp-btn:hover {
     background: linear-gradient(90deg, #3182ce, #63b3ed);
 }
+
+.sidebar .nav-link:hover {
+    background-color: #007bff; /* Màu nền khi hover */
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebar .nav-item {
+    border-bottom: 1px solid #444;
+}
+
+.sidebar .nav-link {
+    transition: background-color 0.3s ease;
+    padding: 12px 15px;
+}

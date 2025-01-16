@@ -22,11 +22,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'dangxuat') {
             <a class="nav-link" href="index.php?action=quanlybaiviet&query=them"><i class=""></i> Quản lý bài viết</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="index.php?action=quanlydanhmucbaiviet&query=them"><i class=""></i> Quản lý danh mục bài viết</a>
+            <a class="nav-link" href="index.php?action=quanlydonhang&query=duyet"><i class=""></i> Quản lý đơn hàng</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class=""></i> Settings</a>
-        </li>
+        
         <li class="nav-item">
             <a class="nav-link" href="index.php?action=dangxuat">
                 <i class="fas fa-sign-out-alt"></i> Đăng xuất: 

@@ -31,7 +31,7 @@ $query = mysqli_query($mysqli, $sql);
                         <img src="../admin/modules/quanlysanpham/uploads/<?php echo $row['HinhAnh']; ?>" alt="<?php echo $row['TenSanPham']; ?>" style="height:250px;">
                         <h5><?php echo $row['TenSanPham']; ?></h5>
                         <p><?php echo number_format($row['GiaBan'], 0, ',', '.'); ?> VNĐ</p>
-                        <a href="index.php?quanly=sanpham&id=<?php echo $row_pro['MaSanPham']; ?>" class="btn btn-outline-primary">Chi tiết</a>
+                        <a href="index.php?quanly=sanpham&id=<?php echo $row['MaSanPham']; ?>" class="btn btn-outline-primary">Chi tiết</a>
                     </div>
                 </div>
             <?php

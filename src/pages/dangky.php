@@ -37,8 +37,7 @@
                 <label for="gioitinh" class="form-label">Giới tính</label>
                 <select class="form-select" id="gioitinh" name="gioitinh" required>
                     <option value="Nam">Nam</option>
-                    <option value="Nữ">Nữ</option>
-                    <option value="Khác">Khác</option>
+                    <option value="Nữ">Nữ</option>  
                 </select>
             </div>
             <div class="mb-3">

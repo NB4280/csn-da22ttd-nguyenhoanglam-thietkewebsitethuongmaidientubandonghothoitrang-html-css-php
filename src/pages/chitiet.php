@@ -89,6 +89,87 @@
             color: #007bff;
             text-decoration: none;
         }
+        /* Mô tả sản phẩm */
+/* Mô tả sản phẩm */
+.description {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 15px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.description h4 {
+    font-size: 1.3rem; 
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 0.95rem; /* Giảm kích thước chữ cho nội dung mô tả */
+    line-height: 1.2; /* Giảm khoảng cách dòng để giống văn bản thông thường */
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Các thẻ <p> trong mô tả được căn chỉnh đẹp hơn */
+.description p:first-of-type {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Cải thiện độ tương phản cho các đoạn văn */
+.description p:nth-of-type(odd) {
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Tạo khoảng cách giữa các đoạn văn */
+.description p {
+    margin-bottom: 10px;
+}
+
+/* Thêm hiệu ứng khi di chuột vào các liên kết trong mô tả */
+.description a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.description a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+
+/* Mô tả sản phẩm với kích thước cố định */
+.product-description-container {
+    width: 600px;       /* Chiều rộng 600px */
+    height: 500px;      /* Chiều cao 500px */
+    overflow: auto;     /* Thêm thanh cuộn nếu nội dung vượt quá */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề mô tả */
+.product-description-container h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Nội dung mô tả */
+.product-description-container p {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    color: #555;
+}
+
+
     </style>
 </head>
 <body>
@@ -103,28 +184,27 @@
             <!-- Thông tin sản phẩm -->
             <div class="col-md-6 product-info">
                 <h3><?php echo $product['TenSanPham']; ?></h3>
+                
+                <div class="product-description-container">
+    <h4>Mô tả sản phẩm</h4>
+    <p><?php echo nl2br($product['MoTa']); ?></p>
+</div>
+                    
+               
+
                 <p class="price"><?php echo number_format($product['GiaBan'], 0, ',', '.'); ?> VNĐ</p>
                 <p class="text-muted">
                     <?php echo ($product['SoLuongSP'] > 0) ? 'Còn hàng' : 'Hết hàng'; ?>
                 </p>
-                <p class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    (4.5/5)
-                </p>
+
                 <form method="POST" action="themgiohang.php">
                     <input type="hidden" name="idsanpham" value="<?php echo $product['MaSanPham'];?>">
                     <button type="submit" class="btn btn-primary btn-buy">Thêm vào giỏ hàng</button>
                 </form>
-
-
-                
             </div>
         </div>
 
+        
         
     </div>
 

@@ -14,9 +14,7 @@
         // Giao diện danh mục chung nếu không có ID
         include("../includes/menu.php");
         include("../pages/SanPhamMoi.php");
-    } elseif ($tam == 'tintuc') {
-        // Trang tin tức
-        include("../pages/TinTuc.php");
+  
     } elseif ($tam == 'lienhe') {
         // Trang liên hệ
         include("../pages/LienHe.php");
@@ -28,6 +26,10 @@
         // tìm kiếm sản phẩm
         include("../includes/menu.php");
         include("../pages/timkiem.php");
+    } elseif ($tam == 'baiviet') {
+        include("../pages/baiviet.php");
+    } elseif ($tam == 'chitietbaiviet') {
+        include("../pages/baiviet.php");
     } else {
         // Trang mặc định (trang chủ)
         include("../includes/slider.php");

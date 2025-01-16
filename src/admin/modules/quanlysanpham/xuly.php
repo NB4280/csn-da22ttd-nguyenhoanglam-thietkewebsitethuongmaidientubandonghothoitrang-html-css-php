@@ -1,7 +1,6 @@
 <?php
 include("../../config/config.php");
 
-// Lấy dữ liệu từ form
 $tensp = $_POST['TenSanPham'];
 $madanhmuc = $_POST['MaDanhMucSP'];
 $giasp = $_POST['GiaBan'];
@@ -15,7 +14,11 @@ $hinhanhsp = $_FILES['HinhAnh']['name'];
 $hinhanhsp_tmp = $_FILES['HinhAnh']['tmp_name'];
 $hinhanhsp_new_name = time() . '_' . $hinhanhsp; // Đổi tên file ảnh
 
+
 if (isset($_POST['ThemSP'])) {
+
+    // Lấy dữ liệu từ form
+
     // Tải lên hình ảnh mới nếu có
     if ($hinhanhsp != '' && move_uploaded_file($hinhanhsp_tmp, 'uploads/' . $hinhanhsp_new_name)) {
         $sql_them = "INSERT INTO sanpham (MaDanhMucSP, TenSanPham, SoLuongSP, GiaBan, HinhAnh, TomTat, MoTa, TrangThai) 

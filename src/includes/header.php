@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <header>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -11,7 +12,7 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="index.php">Trang Chủ</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.php?quanly=danhmuc">Sản Phẩm</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Bài viết</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php?quanly=baiviet">Bài viết</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Liên Hệ</a></li>
                 </ul>
                 <form class="d-flex me-2" action="index.php?quanly=timkiem" method="POST">
@@ -21,12 +22,31 @@
                     </button>
                 </form>
 
-                <a class="d-flex btn btn-outline-dark ms-1" href="GioHang.php">
-                    <i class="bi bi-cart-fill" style="font-size: 20px; color: #000;"></i> 
-                    <span class="ms-2">Giỏ hàng</span> 
-                </a>
+                
                
-                <a href="dangky.php" class="btn btn-success ms-2">Đăng ký</a>
+                <?php
+                
+                if (isset($_SESSION['username'])) {
+                    // Khi người dùng đã đăng nhập
+                    echo '<div class="dropdown ms-2">
+                            <a class=" btn btn-outline-dark ms-1" href="GioHang.php">
+                                <i class="bi bi-cart-fill" style="font-size: 20px; color: #000;"></i> 
+                                <span class="ms-2">Giỏ hàng</span> 
+                            </a>
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                 ' . htmlspecialchars($_SESSION['username']) . '
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="profile.php">Hồ sơ</a></li>
+                                <li><a class="dropdown-item" href="dangxuat.php">Đăng xuất</a></li>
+                            </ul>
+                          </div>';
+                } else {
+                    // Khi người dùng chưa đăng nhập
+                    echo '<a href="dangnhap.php" class="btn btn-primary ms-2">Đăng nhập</a>
+                          <a href="dangky.php" class="btn btn-success ms-2">Đăng ký</a>';
+                }
+                ?>
             </div>
         </div>
     </nav>
